@@ -1,0 +1,25 @@
+{
+    "name": "ra-language-chinese",
+    "version": "2.0.2",
+    "description": "Chinese messages for react-admin, the frontend framework for building admin applications on top of REST/GraphQL services",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/chen4w/ra-language-chinese.git"
+    },
+    "keywords": [
+        "react",
+        "react-admin",
+        "react-admin",
+        "translation"
+    ],
+    "author": "c4w",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/chen4w/ra-language-chinese/issues"
+    },
+    "homepage": "https://github.com/chen4w/ra-language-chinese#readme"
+}
