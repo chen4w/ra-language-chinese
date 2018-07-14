@@ -2,8 +2,6 @@
 
 Chinese messages for [react-admin](https://github.com/marmelab/react-admin), the frontend framework for building admin applications on top of REST/GraphQL services.
 
-![react-admin demo](http://static.marmelab.com/react-admin.gif)
-
 ## Installation
 
 ```sh
@@ -16,7 +14,7 @@ npm install --save ra-language-chinese
 import chineseMessages from 'ra-language-chinese';
 
 const messages = {
-    'cn': chineseMessages,
+    'cn': chineseMessages
 };
 
 <Admin locale="cn" messages={messages}>
