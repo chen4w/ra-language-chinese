@@ -16,7 +16,7 @@ module.exports = {
             add_filter: '增加检索',
             remove_filter: '移除检索',
             back: '回退',
-            bulk_actions: '%选中{smart_count}项',
+            bulk_actions: '选中%{smart_count}项',
         },
         boolean: {
             true: '是',
