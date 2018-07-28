@@ -2,7 +2,7 @@ module.exports = {
     ra: {
         action: {
             delete: '删除',
-            show: '显示',
+            show: '查看',
             list: '列表',
             save: '保存',
             create: '新建',
