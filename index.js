@@ -17,6 +17,9 @@ module.exports = {
             remove_filter: '移除检索',
             back: '回退',
             bulk_actions: '选中%{smart_count}项',
+            export: '导出',
+            search: '检索',
+            show: '显示',
         },
         boolean: {
             true: '是',
@@ -30,6 +33,7 @@ module.exports = {
             dashboard: '概览',
             not_found: '未发现',
             loading: '加载中',
+            error: '出现错误',
         },
         input: {
             file: {
@@ -75,10 +79,12 @@ module.exports = {
             page_out_from_end: '已到最末页',
             page_out_from_begin: '已到最前页',
             page_range_info: '%{offsetBegin}-%{offsetEnd} / %{total}',
+            page_rows_per_page: '每页行数:',
             next: '向后',
             prev: '向前',
         },
         auth: {
+            user_menu: '设置',
             username: '用户名',
             password: '密码',
             sign_in: '登录',
@@ -92,6 +98,8 @@ module.exports = {
             bad_item: '不正确的条目',
             item_doesnt_exist: '条目不存在',
             http_error: '与服务通信出错',
+            canceled: '取消动作',
+            data_provider_error:'dataProvider错误. 请检查console的详细信息.',
             canceled: '取消动作',
         },
         validation: {
