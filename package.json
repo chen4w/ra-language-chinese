@@ -3,8 +3,13 @@
     "version": "2.0.5",
     "description": "Chinese messages for react-admin, the frontend framework for building admin applications on top of REST/GraphQL services",
     "main": "index.js",
+    "module": "esm/index.js",
+    "types": "esm/index.d.ts",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "build": "yarn run build-cjs && yarn run build-esm",
+        "build-cjs": "rimraf ./lib && tsc",
+        "build-esm": "rimraf ./esm && tsc --outDir esm --module es2015",
+        "watch": "tsc --outDir esm --module es2015 --watch"
     },
     "repository": {
         "type": "git",
@@ -21,5 +26,11 @@
     "bugs": {
         "url": "https://github.com/chen4w/ra-language-chinese/issues"
     },
-    "homepage": "https://github.com/chen4w/ra-language-chinese#readme"
+    "homepage": "https://github.com/chen4w/ra-language-chinese#readme",
+    "dependencies": {
+        "ra-core": "^3.4.1"
+    },
+    "devDependencies": {
+        "rimraf": "^3.0.2"
+    }
 }
