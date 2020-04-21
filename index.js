@@ -20,6 +20,13 @@ module.exports = {
             export: '导出',
             search: '检索',
             show: '显示',
+            clear_input_value: '重置',
+            clone: '复制',
+            confirm: '确认',
+            remove_filter: '移除该条筛选',
+            expand: '展开',
+            open_menu: '打开菜单',
+            close_menu: '关闭菜单'
         },
         boolean: {
             true: '是',
@@ -34,6 +41,8 @@ module.exports = {
             not_found: '未发现',
             loading: '加载中',
             error: '出现错误',
+            empty: '尚未有 %{name}记录.',
+            invite: '是否新建一条?',
         },
         input: {
             file: {
@@ -70,6 +79,8 @@ module.exports = {
                 '删除 %{name} |||| 删除 %{smart_count}项 %{name} ',
             bulk_delete_content:
                 '您确定要删除 %{name}? |||| 您确定要删除 %{smart_count} 项?',
+            unsaved_changes:
+                "您确定放弃未保存的更改吗?"
         },
         navigation: {
             no_results: '结果为空',
@@ -101,6 +112,9 @@ module.exports = {
             canceled: '取消动作',
             data_provider_error:'dataProvider错误. 请检查console的详细信息.',
             canceled: '取消动作',
+             i18n_error:
+                '未能加载您选择的语言',
+            logged_out: '您的访问已结束，请重新连接',
         },
         validation: {
             required: '必填',
