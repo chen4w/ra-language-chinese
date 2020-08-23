@@ -12,15 +12,19 @@ npm install --save ra-language-chinese
 
 ```js
 import chineseMessages from 'ra-language-chinese';
+import polyglotI18nProvider from 'ra-i18n-polyglot';
 
-const messages = {
-    'cn': chineseMessages
-};
+const i18nProvider = polyglotI18nProvider(() => chineseMessages, 'ch');
 
-<Admin locale="cn" messages={messages}>
-  ...
-</Admin>
+const App = () => (
+    <Admin i18nProvider={i18nProvider}>
+        ...
+    </Admin>
+);
 ```
+
+## Use reference
+Please check the official website tutorial.[changing-the-default-locale]https://marmelab.com/react-admin/Translation.html#changing-the-default-locale
 
 ## License
 

@@ -1,6 +1,7 @@
 module.exports = {
     ra: {
         action: {
+            unselect: '反选',
             delete: '删除',
             show: '查看',
             list: '列表',
