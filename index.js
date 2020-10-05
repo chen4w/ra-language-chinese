@@ -3,6 +3,7 @@ module.exports = {
         action: {
             unselect: '反选',
             delete: '删除',
+            export: '导出',
             show: '查看',
             list: '列表',
             save: '保存',
