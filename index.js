@@ -11,6 +11,7 @@ module.exports = {
             edit: '编辑',
             sort: '排序',
             cancel: '取消',
+            confirm: '确认',
             undo: '撤销',
             refresh: '刷新',
             add: '增加',
