@@ -11,8 +11,8 @@ npm install --save ra-language-chinese
 ## Usage
 
 ```js
-import chineseMessages from 'ra-language-chinese';
 import polyglotI18nProvider from 'ra-i18n-polyglot';
+import chineseMessages from 'ra-language-chinese';
 
 const i18nProvider = polyglotI18nProvider(() => chineseMessages, 'ch');
 
