@@ -24,7 +24,7 @@ const App = () => (
 ```
 
 ## Use reference
-Please check the official website tutorial.[changing-the-default-locale]https://marmelab.com/react-admin/Translation.html#changing-the-default-locale
+Please check the official website tutorial.[changing-the-default-locale](https://marmelab.com/react-admin/Translation.html#changing-the-default-locale)
 
 ## License
 
