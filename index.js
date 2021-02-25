@@ -100,6 +100,7 @@ module.exports = {
             page_rows_per_page: '每页行数:',
             next: '向后',
             prev: '向前',
+            skip_nav: '跳到内容',
         },
         sort: {
             sort_by: '按 %{field} %{order}',
