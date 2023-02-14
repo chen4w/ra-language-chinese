@@ -1,4 +1,6 @@
-module.exports = {
+import { TranslationMessages } from 'ra-core';
+
+const englishMessages: TranslationMessages = {
     ra: {
         action: {
             add_filter: '增加检索',
@@ -6,27 +8,38 @@ module.exports = {
             back: '回退',
             bulk_actions: '选中%{smart_count}项',
             cancel: '取消',
+            clear_array_input: 'Clear the list',
             clear_input_value: '清空输入',
             clone: '克隆',
-            close: '关闭',
-            close_menu: '关闭菜单',
             confirm: '确认',
             create: '新建',
+            create_item: 'Create %{item}',
             delete: '删除',
             edit: '编辑',
-            expand: '展开',
             export: '导出',
             list: '列表',
-            open_menu: '打开菜单',
             refresh: '刷新',
-            remove: '删除',
             remove_filter: '移除检索',
+            remove_all_filters: 'Remove all filters',
+            remove: '删除',
             save: '保存',
             search: '检索',
+            select_all: 'Select all',
+            select_row: 'Select this row',
             show: '查看',
             sort: '排序',
             undo: '撤销',
             unselect: '反选',
+            expand: '展开',
+            close: '关闭',
+            open_menu: '打开菜单',
+            close_menu: '关闭菜单',
+            update: 'Update',
+            move_up: 'Move up',
+            move_down: 'Move down',
+            open: 'Open',
+            toggle_theme: 'Toggle Theme',
+            select_columns: 'Columns',
         },
         boolean: {
             true: '是',
@@ -36,14 +49,14 @@ module.exports = {
         page: {
             create: '新建 %{name}',
             dashboard: '概览',
-            edit: '%{name} #%{id}',
-            empty: '无 %{name} ',
+            edit: '%{name} %{recordRepresentation}',
             error: '出现错误',
-            invite: '要增加吗?',
             list: '%{name} 列表',
             loading: '加载中',
             not_found: '未发现',
-            show: '%{name} #%{id}',
+            show: '%{name} %{recordRepresentation}',
+            empty: '无 %{name} ',
+            invite: '要增加吗?',
         },
         input: {
             file: {
@@ -72,22 +85,31 @@ module.exports = {
         message: {
             about: '关于',
             are_you_sure: '您确定操作?',
+            auth_error:
+                'A error occurred while validating the authentication token.',
             bulk_delete_content:
                 '您确定要删除 %{name}? |||| 您确定要删除 %{smart_count} 项?',
             bulk_delete_title:
                 '删除 %{name} |||| 删除 %{smart_count}项 %{name} ',
+            bulk_update_content:
+                'Are you sure you want to update this %{name}? |||| Are you sure you want to update these %{smart_count} items?',
+            bulk_update_title:
+                'Update %{name} |||| Update %{smart_count} %{name}',
+            clear_array_input: 'Are you sure you want to clear the whole list?',
             delete_content: '您确定要删除该条目?',
             delete_title: '删除 %{name} #%{id}',
+            details: 'Details',
             error:
                 "客户端错误导致请求未完成.",
+
             invalid_form: '表单输入无效. 请检查错误提示',
             loading: '正在加载页面, 请稍候',
             no: '否',
             not_found:
                 '您输入了错误的URL或者错误的链接.',
+            yes: '是',
             unsaved_changes:
                 "修改未保存. 放弃修改吗?",
-            yes: '是',
         },
         navigation: {
             no_results: '结果为空',
@@ -97,16 +119,22 @@ module.exports = {
             page_out_from_end: '已到最末页',
             page_out_from_begin: '已到最前页',
             page_range_info: '%{offsetBegin}-%{offsetEnd} / %{total}',
-            page_rows_per_page: '每页行数:',
+            partial_page_range_info:
+                '%{offsetBegin}-%{offsetEnd} of more than %{offsetEnd}',
+            current_page: 'Page %{page}',
+            page: 'Go to page %{page}',
+            first: 'Go to first page',
+            last: 'Go to last page',
             next: '向后',
-            prev: '向前',
+            previous: 'Go to previous page',
+            page_rows_per_page: '每页行数:',
             skip_nav: '跳到内容',
         },
         sort: {
             sort_by: '按 %{field} %{order}',
             ASC: '升序',
             DESC: '降序',
-        },    
+        },
         auth: {
             auth_check_error: '请登录以继续',
             user_menu: '设置',
@@ -123,12 +151,13 @@ module.exports = {
             bad_item: '不正确的条目',
             item_doesnt_exist: '条目不存在',
             http_error: '与服务通信出错',
-            canceled: '取消动作',
-            data_provider_error:'dataProvider错误. 请检查console的详细信息.',
+            data_provider_error:
+                'dataProvider错误. 请检查console的详细信息.',
             i18n_error:
                 '无法加载指定语言包',
             canceled: '取消动作',
             logged_out: '会话失效, 请重连.',
+            not_authorized: "You're not authorized to access this resource.",
         },
         validation: {
             required: '必填',
@@ -141,5 +170,44 @@ module.exports = {
             oneOf: '必须为: %{options}其中一项',
             regex: '必须符合指定的格式 (regexp): %{pattern}',
         },
+        saved_queries: {
+            label: 'Saved queries',
+            query_name: 'Query name',
+            new_label: 'Save current query...',
+            new_dialog_title: 'Save current query as',
+            remove_label: 'Remove saved query',
+            remove_label_with_name: 'Remove query "%{name}"',
+            remove_dialog_title: 'Remove saved query?',
+            remove_message:
+                'Are you sure you want to remove that item from your list of saved queries?',
+            help: 'Filter the list and save this query for later',
+        },
+        configurable: {
+            customize: 'Customize',
+            configureMode: 'Configure this page',
+            inspector: {
+                title: 'Inspector',
+                content: 'Hover the application UI elements to configure them',
+                reset: 'Reset Settings',
+                hideAll: 'Hide All',
+                showAll: 'Show All',
+            },
+            Datagrid: {
+                title: 'Datagrid',
+                unlabeled: 'Unlabeled column #%{column}',
+            },
+            SimpleForm: {
+                title: 'Form',
+                unlabeled: 'Unlabeled input #%{input}',
+            },
+            SimpleList: {
+                title: 'List',
+                primaryText: 'Primary text',
+                secondaryText: 'Secondary text',
+                tertiaryText: 'Tertiary text',
+            },
+        },
     },
 };
+
+export default englishMessages;
